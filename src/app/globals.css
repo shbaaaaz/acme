@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-background box-border;
+}
+
+h1,
+h2,
+h3 {
+  @apply text-dark font-semibold;
+}
+
+h1 {
+  @apply text-4xl md:text-6xl;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl;
+}
+
+p {
+  @apply text-secondary font-normal text-lg;
+}
