@@ -1,11 +1,9 @@
+import { ActionButtonType } from '@/utils/types';
 import Link from 'next/link';
 
-type CtaProps = {
-  text: string;
-  size?: 'sm' | 'md' | 'lg';
-}
 
-export const Cta = ({ text, size }: CtaProps) => {
+
+export const Cta = ({ text, size }: ActionButtonType) => {
   const fontSizeClass = size && size !== 'md' ? `text-${size}` : 'text-base';
   return (
     <Link

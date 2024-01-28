@@ -1,22 +1,29 @@
-import { Callout } from "./Callout"
-import { FeatureSection } from "./FeatureSection"
-import { Hero } from "./Hero"
-import { Section } from "./Section"
+import { Callout } from '@/components/Callout'
+import { FeatureSection } from '@/components/FeatureSection'
+import { Hero } from '@/components/Hero'
+import { Section } from '@/components/Section'
+import { CalloutType, FeatureSectionType, HeroType, PageProps } from '@/utils/types'
 
-export const PageTemplate = () => {
+
+export const PageTemplate = ({ sections }: PageProps) => {
   return (
     <main>
-        <Section>
-        <Hero title='Build high-performance composable applications' description='Equip your team with the industry’s leading native GraphQL Content APIs, Content Federation capabilities and rich set of developer tools, to build truly composable applications.' actionButtons={[{id:"1", text:'Get started'}]}/>
+      {sections.map((section) => (
+        <Section key={section.id}>
+          {section.blocks.map((block) => {
+            switch (block.type) {
+              case 'hero':
+                return <Hero key={block.id} {...block as HeroType} />;
+              case 'feature':
+                return <FeatureSection key={block.id} {...block as FeatureSectionType} />
+              case 'callout':
+                return <Callout key={block.id} {...block as CalloutType} />
+              default:
+                return null
+            }
+          })}
         </Section>
-        <Section>
-          <FeatureSection label='VERSATILE' title="Works with all modern web technologies" description="As a composable and headless platform, Acme works with all your preferred frontend frameworks, existing systems, GraphQL and REST APIs." cta={{ text: "View GitHub repository"}} media={{image: {url: "https://media.graphassets.com/cktbkWehT4Cxof209pQv", width: 480, height: 320}, altText: "test"}}/>
-
-          <FeatureSection title="Product roundup Q2 2023" description="Keep your customers in the flow by embedding help articles right on your website. With Beacon, they never have to leave the page to find an answer." cta={{ text: "View GitHub repository"}} media={{youTubeVideoId:"znkZ8X_7tLA"}} mediaAlignment="left"/>
-        </Section>
-        <Section>
-          <Callout title='Start your 30-day free trial' description='Join over 4,000+ startups already growing with us.' actionButton={{text: "Get started"}} />
-        </Section>
+      ))}
     </main>
   )
 }

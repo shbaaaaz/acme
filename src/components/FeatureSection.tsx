@@ -1,25 +1,7 @@
 import { Cta } from './Cta';
 import Image from 'next/image';
 import { YouTubePlayer } from './YouTubePlayer';
-
-type FeatureSectionProps = {
-  label?: string;
-  title: string;
-  description: string;
-  cta?: {
-    text: string;
-  };
-  media: {
-    image?: {
-      url: string;
-      width: number;
-      height: number;
-    };
-    altText?: string;
-    youTubeVideoId?: string;
-  };
-  mediaAlignment?: string;
-}
+import { FeatureSectionType } from '@/utils/types';
 
 export const FeatureSection = ({
   label,
@@ -28,7 +10,8 @@ export const FeatureSection = ({
   cta,
   media,
   mediaAlignment,
-}: FeatureSectionProps) => {
+}: FeatureSectionType) => {
+
   const flexDirectionDesktop =
     mediaAlignment && mediaAlignment === 'left'
       ? 'md:flex-row-reverse'
@@ -53,15 +36,15 @@ export const FeatureSection = ({
       </div>
       {media && (
         <div className='flex justify-center items-center md:p-10 md:bg-light md:rounded-3xl md:w-1/2'>
-          {media.image ? (
+          {('altText' in media)  ? (
             <Image
               src={media.image.url}
-              alt={media.altText!}
+              alt={media.altText}
               width={media.image.width}
               height={media.image.height}
             />
           ) : (
-            <YouTubePlayer videoId={media.youTubeVideoId!} />
+            <YouTubePlayer youTubeVideoId={media.youTubeVideoId} />
           )}
         </div>
       )}
