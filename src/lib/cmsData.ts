@@ -4,13 +4,17 @@ import { PageType } from "@/utils/types";
 
 const client = new GraphQLClient(process.env.NEXT_PUBLIC_CMS_ENDPOINT as string)
 
-
-
   export const fetchPageData = async (page: string): Promise<PageType> => {
     try {
       const response = await client.request<PageType>(GET_PAGE_DETAILS, { title: page});
       return response;
-    } catch (error) {
-      throw error;
+    } 
+    catch (error: any) {
+      if (error.response?.status === 404) {
+        throw new Error('Not Found')
+      } 
+      else {
+        throw new Error('Something went wrong!')
+      } 
     }
   };  
