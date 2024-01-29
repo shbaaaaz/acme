@@ -4,7 +4,7 @@ Live link: [acme-hygraph.vercel.app](acme-hygraph.vercel.app)
 
 ## Description
 
-This project is a static marketing website featuring a dynamically rendered landing page sourced from a headless CMS. It serves as a showcase for content managed and delivered through a headless CMS.
+This is a marketing website featuring a dynamically rendered landing page sourced from a GraphQL API first headless CMS - Hygraph. It serves as a showcase for content managed and delivered through a headless CMS.
 
 ## Technologies
 
