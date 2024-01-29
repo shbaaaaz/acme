@@ -45,7 +45,7 @@ export const Header = () => {
           {header.navItems.map((headerItem) => (
             <Fragment key={headerItem.id}>
               {headerItem.id === 0 ? (
-                <Image src={headerItem.image!} alt={headerItem.altText!} />
+                <li><Image src={headerItem.image!} alt={headerItem.altText!} /></li>
               ) : (
                 <li className='hidden md:block'>
                   <Link href='#'>{headerItem.text}</Link>

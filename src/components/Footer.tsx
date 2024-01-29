@@ -25,7 +25,7 @@ export const Footer = () => {
           </p>
           <ul className='text-base flex gap-4 items-start md:items-center'>
             {footer.footerItems.map((footerItem) => (
-              <li key={footerItem.id}>
+              <li key={footerItem.id} className="text-secondary">
                 <Link href='#'>{footerItem.text}</Link>
               </li>
             ))}
