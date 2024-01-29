@@ -58,9 +58,19 @@ interface FeatureSectionType {
     };
   }
 
+  interface PageMetadataType {
+    content: {
+      title: string;
+      metadata: {
+        pageTitle: string;
+        pageDescription: string;
+      }
+    }
+  }
+
   type PageProps = {
     sections: SectionType[]
   }
   
-export type { ActionButtonType, ImageType, VideoType, HeroType, CalloutType, FeatureSectionType, SectionType, PageType, PageProps };
+export type { ActionButtonType, ImageType, VideoType, HeroType, CalloutType, FeatureSectionType, SectionType, PageType, PageMetadataType, PageProps };
   

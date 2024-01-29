@@ -1,5 +1,16 @@
 import { gql } from 'graphql-request';
 
+export const GET_SEO_DETAILS = gql`query seo($title: String!) {
+  content: page(where: {title: $title}) {
+    title
+    metadata {
+      pageTitle
+      pageDescription
+    }
+  }
+}
+`
+
 export const GET_PAGE_DETAILS = gql`
   query Page($title: String!) {
     content: page(where: { title: $title }) {
