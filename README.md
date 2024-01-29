@@ -44,3 +44,32 @@ This is a marketing website featuring a dynamically rendered landing page source
   ```
 
 Open http://localhost:3000 in your browser.
+
+## Folder Structure
+
+```
+📦src
+┣ 📂app
+┃ ┣ 📜error.tsx
+┃ ┣ 📜favicon.ico
+┃ ┣ 📜globals.css
+┃ ┣ 📜layout.tsx
+┃ ┗ 📜page.tsx #entry point of the application
+┣ 📂components # This folder contains all the components
+┃ ┣ 📜Callout.tsx
+┃ ┣ 📜Cta.tsx
+┃ ┣ 📜FeatureSection.tsx
+┃ ┣ 📜Footer.tsx
+┃ ┣ 📜Header.tsx
+┃ ┣ 📜Hero.tsx
+┃ ┣ 📜PageTemplate.tsx
+┃ ┣ 📜Section.tsx
+┃ ┗ 📜YouTubePlayer.tsx
+┣ 📂lib
+┃ ┣ 📂queries
+┃ ┃ ┗ 📜query.ts # This file contains all the GraphQL queries.
+┃ ┗ 📜cmsData.ts # GraphQL API call are made in this file to fetch data from Hygraph CMS
+┗ 📂utils
+┃ ┣ 📜enums.ts # This file contains constant values
+┃ ┗ 📜types.ts # This file contains inetrfaces / types used for the data across all the components.
+```
