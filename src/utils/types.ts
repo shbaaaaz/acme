@@ -64,6 +64,9 @@ interface FeatureSectionType {
       metadata: {
         pageTitle: string;
         pageDescription: string;
+        ogImage: {
+          url: string;
+        }
       }
     }
   }

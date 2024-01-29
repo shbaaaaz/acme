@@ -13,7 +13,10 @@ export async function generateMetadata(): Promise<Metadata> {
   const seoDetails = await fetchMetadata(PageEnum.Home)
   return {
     title: seoDetails.content.metadata?.pageTitle || "Acme | Hygraph",
-    description: seoDetails.content.metadata?.pageDescription 
+    description: seoDetails.content.metadata?.pageDescription,
+    openGraph: {
+      images: [seoDetails.content.metadata?.ogImage?.url],
+    }
   }
 }
 

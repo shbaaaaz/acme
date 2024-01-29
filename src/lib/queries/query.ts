@@ -6,6 +6,9 @@ export const GET_SEO_DETAILS = gql`query seo($title: String!) {
     metadata {
       pageTitle
       pageDescription
+      ogImage {
+        url
+      }
     }
   }
 }
