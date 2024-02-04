@@ -2,7 +2,7 @@ import { GraphQLClient } from "graphql-request";
 import { GET_PAGE_DETAILS, GET_SEO_DETAILS } from './queries/query'
 import { PageMetadataType, PageType } from "@/utils/types";
 
-const client = new GraphQLClient(process.env.NEXT_PUBLIC_CMS_ENDPOINT as string)
+const client = new GraphQLClient(process.env.NEXT_PUBLIC_CMS_ENDPOINT as string, { next: { revalidate: 10}})
 
   export const fetchMetadata = async (pageName: string): Promise<PageMetadataType> => {
     try {
