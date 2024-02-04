@@ -36,19 +36,10 @@ export const Header = () => {
         text: 'About',
       },
     ] as NavItem[],
-    buttonGroup: [{
-      id: 0,
-      text: "Login",
-      variant: "transparent"
-    }, {
-      id: 1,
-      text: "Sign up",
-      variant: "primary"
-    }]
   };
 
   return (
-    <header className='h-20 flex flex-col justify-center md:px-8 bg-white text-link font-medium'>
+    <header className='h-20 flex flex-col justify-center md:px-8 bg-white text-dark'>
       <div className='px-8 flex justify-between items-center'>
         <ul className='flex items-center gap-8'>
           {header.navItems.map((headerItem) => (
@@ -64,16 +55,10 @@ export const Header = () => {
           ))}
         </ul>
         <div className='flex items-center gap-3'>
-          { header.buttonGroup.map(button => (
-            <Fragment key={button.id}>
-              { button.variant === "primary" ? 
-                <Cta text={button.text}/>:
-                <span className='hidden md:block'>
-                  <Cta text={button.text} variant={button.variant}/>
-                </span>
-              }
-            </Fragment>
-          ))}
+          <Link href='#' className='hidden md:block'>
+            Log in
+          </Link>
+          <Cta text="Get Strated"/>
         </div>
       </div>
     </header>

@@ -14,8 +14,6 @@ const config: Config = {
         dark: '#1E293B',
         light: '#F1F5F9',
         background: '#F8FAFC',
-        link: "#334155",
-        heading: "#0F172A"
       },
     },
   },

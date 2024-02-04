@@ -9,7 +9,7 @@ body {
 h1,
 h2,
 h3 {
-  @apply text-heading font-semibold;
+  @apply text-dark font-semibold;
 }
 
 h1 {
