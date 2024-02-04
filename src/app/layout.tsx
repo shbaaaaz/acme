@@ -3,14 +3,15 @@ import { Inter } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageEnum } from "@/utils/enums";
-import { fetchMetadata } from "@/lib/cmsData";
+import { fetchContent } from "@/lib/cmsData";
 import "./globals.css";
+import { PageMetadataType } from "@/utils/types";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata(): Promise<Metadata> {
   
-  const seoDetails = await fetchMetadata(PageEnum.Home)
+  const seoDetails = await fetchContent<PageMetadataType>(PageEnum.Home, "metadata")
 
   return {
     title: seoDetails.content.metadata?.pageTitle || "Acme | Hygraph",

@@ -1,10 +1,11 @@
 import { PageTemplate } from "@/components/PageTemplate";
-import { fetchPageData } from "@/lib/cmsData";
+import { fetchContent } from "@/lib/cmsData";
 import { PageEnum } from "@/utils/enums";
+import { PageType } from "@/utils/types";
 
 
 export default async function Home() {
-  const pageData = await fetchPageData(PageEnum.Home)
+  const pageData = await fetchContent<PageType>(PageEnum.Home, "page")
   
   return (
     <main>
