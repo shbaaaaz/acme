@@ -8,6 +8,8 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+
+
 export const revalidate = 10;
 
 export async function generateMetadata(): Promise<Metadata> {
