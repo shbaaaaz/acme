@@ -23,7 +23,7 @@ export const FeatureSection = ({
       <div className='flex flex-col gap-8 md:items-start md:w-1/2'>
         <div className='flex flex-col items-start gap-4'>
           <div className='flex flex-col items-start'>
-            {label && <span className='text-primary font-bold'>{label}</span>}
+            {label && <span className='text-primary font-bold text-lg'>{label}</span>}
             <h2>{title}</h2>
           </div>
           <p>{description}</p>

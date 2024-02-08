@@ -12,7 +12,7 @@ export const Cta = ({ text, size = "md" }: ActionButtonType) => {
   }
   return (
     <Link
-      className={`box-border flex justify-center items-center bg-primary text-white font-medium px-7 py-4 border border-solid border-primary rounded-lg shadow-sm ${sizeClass[size]}`}
+      className={`box-border flex justify-center items-center bg-primary text-white font-medium border border-solid border-primary rounded-lg shadow-xs ${sizeClass[size]}`}
       href="#"
     >
       {text}
