@@ -43,7 +43,7 @@ export const FeatureSection = ({
       {media && (
         <div className='md:p-10 md:bg-light md:rounded-3xl md:w-1/2'>
           {('altText' in media)  ? (
-            <div className="relative h-[320px] flex justify-center items-center">
+            <div className="relative h-[180px] md:h-[320px] flex justify-center items-center">
               <Image
                 src={media.image.url}
                 alt={media.altText}
