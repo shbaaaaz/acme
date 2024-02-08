@@ -16,8 +16,8 @@ export const Footer = () => {
   };
 
   return (
-    <div className='px-8'>
-      <footer className='md:px-8'>
+    <div className='md:px-20'>
+      <footer className='px-8'>
         <hr />
         <div className='py-8 flex flex-col-reverse justify-center items-center md:flex-row gap-8 '>
           <p className='text-base grow text-center md:text-start text-hero'>
