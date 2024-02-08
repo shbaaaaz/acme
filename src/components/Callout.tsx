@@ -10,7 +10,7 @@ export const Callout = ({ title, description, actionButton }: CalloutType) => {
           <p className='text-inherit'>{description}</p>
         </div>
         <div>
-          <Cta text={actionButton.text} />
+          <Cta text={actionButton.text} size={actionButton.size}/>
         </div>
       </div>
     </div>

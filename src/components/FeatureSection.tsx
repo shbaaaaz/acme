@@ -30,7 +30,7 @@ export const FeatureSection = ({
         </div>
         {cta && (
           <div>
-            <Cta text={cta.text} />
+            <Cta text={cta.text} size={cta.size}/>
           </div>
         )}
       </div>

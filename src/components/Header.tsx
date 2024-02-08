@@ -58,7 +58,7 @@ export const Header = () => {
           <Link href='#' className='hidden md:block'>
             Log in
           </Link>
-          <Cta text="Get Strated"/>
+          <Cta text="Sign up" size='sm'/>
         </div>
       </div>
     </header>

@@ -29,6 +29,7 @@ export const GET_PAGE_DETAILS = gql`
             actionButtons {
               id
               text
+              size
             }
             type
           }
@@ -39,6 +40,7 @@ export const GET_PAGE_DETAILS = gql`
             actionButton {
               id
               text
+              size
             }
             type
           }
@@ -49,6 +51,7 @@ export const GET_PAGE_DETAILS = gql`
             cta: actionButton {
               id
               text
+              size
             }
             description
             type
