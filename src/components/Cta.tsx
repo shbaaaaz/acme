@@ -3,15 +3,16 @@ import Link from 'next/link';
 
 
 
-export const Cta = ({ text, size = 'md', variant = "primary" }: ActionButtonType) => {
+export const Cta = ({ text, size = "md" }: ActionButtonType) => {
   
-  const fontSizeClass = size && size !== 'md' ? `text-${size}` : 'text-base';
-  const variationStylingClass = variant === "primary" ? "bg-primary text-white border border-solid border-primary rounded-lg shadow-sm": "bg-transparent";
-  const ctaStyle = `box-border flex justify-center items-center font-medium px-7 py-4 ${fontSizeClass} ${variationStylingClass}`
-
+  const sizeClass = {
+    sm:'py-2.5 px-[18px] text-base',
+    md: 'py-3 px-5 text-base',
+    lg: 'py-4 px-7 text-lg'
+  }
   return (
     <Link
-      className={ctaStyle}
+      className={`box-border flex justify-center items-center bg-primary text-white font-medium border border-solid border-primary rounded-lg shadow-xs ${sizeClass[size]}`}
       href="#"
     >
       {text}

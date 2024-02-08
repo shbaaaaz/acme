@@ -16,16 +16,16 @@ export const Footer = () => {
   };
 
   return (
-    <div className='px-8'>
-      <footer className='md:px-8'>
+    <div className='md:px-20'>
+      <footer className='px-8'>
         <hr />
         <div className='py-8 flex flex-col-reverse justify-center items-center md:flex-row gap-8 '>
-          <p className='text-base grow text-center md:text-start'>
+          <p className='text-base grow text-center md:text-start text-hero'>
             {footer.footerText}
           </p>
           <ul className='text-base flex gap-4 items-start md:items-center'>
             {footer.footerItems.map((footerItem) => (
-              <li key={footerItem.id} className="text-secondary">
+              <li key={footerItem.id} className="text-hero">
                 <Link href='#'>{footerItem.text}</Link>
               </li>
             ))}

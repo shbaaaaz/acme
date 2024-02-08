@@ -10,13 +10,16 @@ const config: Config = {
     extend: {
       colors: {
         primary: '#7C3AED',
-        secondary: '#64748B',
+        secondary: '#334155',
         dark: '#1E293B',
         light: '#F1F5F9',
         background: '#F8FAFC',
-        link: "#334155",
-        heading: "#0F172A"
+        "heading": "#0F172A",
+        "hero": "#64748B"
       },
+      boxShadow: {
+        'xs': '0px 1px 2px 0px rgba(16, 24, 40, 0.05)',
+      }
     },
   },
   plugins: [],

@@ -1,8 +1,7 @@
 interface ActionButtonType {
     id?: string;
     text: string;
-    size?: string;
-    variant?: string;
+    size?: "sm" | "md" | "lg";
 }
   
 interface ImageType {

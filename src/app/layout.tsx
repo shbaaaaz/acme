@@ -9,6 +9,10 @@ import { PageMetadataType } from "@/utils/types";
 
 const inter = Inter({ subsets: ["latin"] });
 
+
+
+export const revalidate = 10;
+
 export async function generateMetadata(): Promise<Metadata> {
   
   const seoDetails = await fetchContent<PageMetadataType>(PageEnum.Home, "metadata")
